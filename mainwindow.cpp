@@ -1,12 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QTime>
+#include <QRandomGenerator>
 
 int gr(int min, int max)
 {
     Q_ASSERT(min < max);
-    // 加入随机种子。种子是当前时间距离0点0分0秒的秒数。
-    // 每次启动程序，只添加一次种子，以做到数字真正随机。
     static bool seedStatus;
     if (!seedStatus)
     {
@@ -59,7 +58,7 @@ void fufumove()
             fx--;
             stop = true;
         }
-        if (r == 2 && fx + 1 <= getw() - 1)
+        if (r == 2 && fx + 1 <= geth() - 1)
         {
             fx++;
             stop = true;
@@ -69,7 +68,7 @@ void fufumove()
             fy--;
             stop = true;
         }
-        if (r == 4 && fy + 1 <= geth() - 1)
+        if (r == 4 && fy + 1 <= getw() - 1)
         {
             fy++;
             stop = true;
@@ -208,7 +207,7 @@ void MainWindow::on_left_clicked()
 
 void MainWindow::on_right_clicked()
 {
-    if (hy >= geth() - 1) return;
+    if (hy >= getw() - 1) return;
     hy ++;
     fufumove();
     QString f = printfield();
