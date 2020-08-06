@@ -6,3 +6,4 @@ Terminal=false
 Type=Application
 Categories=Game;
 Comment=LanGong Zff in QT
+Icon=/usr/share/qtzff/icon.png
