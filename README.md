@@ -14,6 +14,8 @@ makepkg -si
 
 ## From GitHub
 
+You have to install `qmake` (`qt5-qmake` or `qt5-base`)
+
 ```
 git clone https://github.com/ohzff/qtzff.git
 cd qtzff
