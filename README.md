@@ -24,5 +24,4 @@ sudo bash install.sh
 
 # Start Game
 
-In `ApplicationMenu->Games->QtZff` and command qtzff
-
+In `ApplicationMenu->Games->QtZff` and command `qtzff`
